@@ -1,0 +1,28 @@
+.barchart {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 1rem;
+  position: relative;
+}
+
+.barchart::before {
+  content: "";
+  position: absolute;
+  background-color: #c3c1c1;
+  height: 100%;
+  width: 0.25rem;
+  left: 13rem;
+  top: 0;
+  border-radius: 0.5rem;
+  opacity: 0.6;
+}
+
+.barchart > div:nth-child(3n - 1) {
+  text-align: right;
+}
+
+.bar {
+  background-color: var(--color-1);
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 6px #000000;
+}
